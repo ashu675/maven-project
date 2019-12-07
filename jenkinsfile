@@ -1,0 +1,8 @@
+
+agent any
+stages
+{
+stage ('job clone')
+git 'https://github.com/ashu675/maven-project.git'
+}
+}
