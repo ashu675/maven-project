@@ -27,8 +27,15 @@ withMaven(jdk: 'LocalJDK', maven: 'LocalMaven') {
 }
 }
 }
-
-
+stage('build')
+{
+steps
+{
+withMaven(jdk: 'LocalJDK', maven: 'LocalMaven') {
+    sh 'mvn package'
+}
+}
+}
 
 
 
