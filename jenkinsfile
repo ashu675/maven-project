@@ -8,5 +8,18 @@ steps
 {git 'https://github.com/ashu675/maven-project.git'
 }
 }
+stage ('compile code')
+{
+steps
+{ 
+withMaven(jdk: 'LocalJDK', maven: 'LocalMaven') {
+    sh 'mvn compile'
+}
+}
+}
+
+
+
+
 }
 }
